@@ -11,7 +11,7 @@ import org.springframework.web.reactive.function.server.ServerResponse;
 public class CustomerRouter {
 
 	@Bean
-	public RouterFunction<ServerResponse> route(CustomerHandler customerHandler) {
+	public RouterFunction<ServerResponse> customerRoutes(CustomerHandler customerHandler) {
 
 		return RouterFunctions.route(RequestPredicates.GET("/customer"), customerHandler::customer)
 				.andRoute(RequestPredicates.POST("/createCustomer"), customerHandler::createCustomer);

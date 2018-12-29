@@ -11,7 +11,7 @@ import org.springframework.web.reactive.function.server.ServerResponse;
 public class ProductRouter {
 
 	@Bean
-	public RouterFunction<ServerResponse> route(ProductHandler productHandler) {
+	public RouterFunction<ServerResponse> productRoutes(ProductHandler productHandler) {
 
 		return RouterFunctions.route(RequestPredicates.GET("/product"), productHandler::product)
 				.andRoute(RequestPredicates.POST("/createProduct"), productHandler::createProduct);

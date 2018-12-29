@@ -11,7 +11,7 @@ import org.springframework.web.reactive.function.server.ServerResponse;
 public class OrderRouter {
 
 	@Bean
-	public RouterFunction<ServerResponse> route(OrderHandler orderHandler) {
+	public RouterFunction<ServerResponse> orderRoutes(OrderHandler orderHandler) {
 
 		return RouterFunctions.route(RequestPredicates.GET("/order"), orderHandler::order)
 				.andRoute(RequestPredicates.POST("/createOrder"), orderHandler::createOrder);
