@@ -1,12 +1,18 @@
 package com.altimetrik.microservice.react.bean;
 
 import org.bson.types.ObjectId;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Document
 public class Order {
 
+	@Id
+	@JsonIgnore
 	private ObjectId id;
+	private int orderId;
 	private String orderNumber;
 	private String deliveryLocation;
 
@@ -14,9 +20,10 @@ public class Order {
 		super();
 	}
 
-	public Order(ObjectId id, String orderNumber, String deliveryLocation) {
+	public Order(ObjectId id, int orderId, String orderNumber, String deliveryLocation) {
 		super();
 		this.id = id;
+		this.orderId = orderId;
 		this.orderNumber = orderNumber;
 		this.deliveryLocation = deliveryLocation;
 	}
@@ -27,6 +34,14 @@ public class Order {
 
 	public void setId(ObjectId id) {
 		this.id = id;
+	}
+
+	public int getOrderId() {
+		return orderId;
+	}
+
+	public void setOrderId(int orderId) {
+		this.orderId = orderId;
 	}
 
 	public String getOrderNumber() {
@@ -43,6 +58,12 @@ public class Order {
 
 	public void setDeliveryLocation(String deliveryLocation) {
 		this.deliveryLocation = deliveryLocation;
+	}
+
+	@Override
+	public String toString() {
+		return "Order [orderId=" + orderId + ", orderNumber=" + orderNumber + ", deliveryLocation=" + deliveryLocation
+				+ "]";
 	}
 
 }
