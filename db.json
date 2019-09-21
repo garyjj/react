@@ -1,20 +1,20 @@
 {
-  "positions":[
-  {
-    "latitude":"18.5514",
-    "longitude": "73.8904"
-  },
-  {
-    "latitude":"19.0896",
-    "longitude": "72.8656"
-  },
-  {
-    "latitude":"28.5562",
-    "longitude": "77.1000"
-  },
-  {
-    "latitude":"23.0734",
-    "longitude": "72.6266"
-  }
-]
+  "positions": [
+    {
+      "latitude": "18.5514",
+      "longitude": "73.8904"
+    },
+    {
+      "latitude": "19.0896",
+      "longitude": "72.8656"
+    },
+    {
+      "latitude": "28.5562",
+      "longitude": "77.1000"
+    },
+    {
+      "latitude": "23.0734",
+      "longitude": "72.6266"
+    }
+  ]
 }
